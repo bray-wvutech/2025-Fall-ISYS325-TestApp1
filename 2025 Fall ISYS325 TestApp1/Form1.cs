@@ -7,7 +7,7 @@ namespace _2025_Fall_ISYS325_TestApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPushMe_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello world!");
         }
