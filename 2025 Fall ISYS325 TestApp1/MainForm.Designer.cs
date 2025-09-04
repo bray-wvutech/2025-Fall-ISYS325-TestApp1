@@ -1,6 +1,6 @@
 ﻿namespace _2025_Fall_ISYS325_TestApp1
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             btnPushMe = new Button();
+            lblHelloWorld = new Label();
+            btnClose = new Button();
             SuspendLayout();
             // 
             // btnPushMe
             // 
-            btnPushMe.Location = new Point(188, 80);
+            btnPushMe.Location = new Point(280, 255);
             btnPushMe.Name = "btnPushMe";
             btnPushMe.Size = new Size(239, 110);
             btnPushMe.TabIndex = 0;
@@ -41,19 +43,45 @@
             btnPushMe.UseVisualStyleBackColor = true;
             btnPushMe.Click += btnPushMe_Click;
             // 
-            // Form1
+            // lblHelloWorld
+            // 
+            lblHelloWorld.AutoSize = true;
+            lblHelloWorld.Font = new Font("Showcard Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblHelloWorld.Location = new Point(174, 70);
+            lblHelloWorld.Name = "lblHelloWorld";
+            lblHelloWorld.Size = new Size(116, 37);
+            lblHelloWorld.TabIndex = 1;
+            lblHelloWorld.Text = "label1";
+            // 
+            // btnClose
+            // 
+            btnClose.Location = new Point(560, 112);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(94, 29);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "&Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClose);
+            Controls.Add(lblHelloWorld);
             Controls.Add(btnPushMe);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
+            Load += MainForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnPushMe;
+        private Label lblHelloWorld;
+        private Button btnClose;
     }
 }
